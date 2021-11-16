@@ -1,0 +1,53 @@
+# 'title' is the name of the module that will be displayed to the user
+title: ACMG_autocurate
+
+# 'version' is the version of the annotator. It is primarily used when
+# publishing a module, but is required for all modules.
+version: 1.0.0
+
+# 'type' is the type of module described by this .yml file. In this case it is
+# 'annotator'
+type: annotator
+
+# 'level' is 'variant' or 'gene'
+level: variant
+
+secondary_inputs:
+  gnomad: {}
+  clinvar: {}
+  spliceai: {}
+
+requires:
+- gnomad
+- clinvar
+- spliceai
+
+input_format: crx
+
+# output_columns has the columns that will be included in the output file.
+# The columns are defined in a list. Each column has three required keys:
+# name, title, and type.
+output_columns:
+- name: classification
+  title: Classification
+  type: string
+  desc: Pathogenic, Benign, or VUS
+  width: 70
+- name: reason
+  title: Reason
+  type: string
+  desc: Reason for Classification
+  width: 70
+
+# description is a short description of what the annotator does. Try to limit it
+# to around 80 characters.
+description: Annotator to classify variants as Benign, Pathogenic, or VUS based on other annotators
+
+# developer is you!
+developer:
+  name: 'Jayden Kunwar'
+  organization: 'Johns Hopkins University'
+  email: 'jkunwar1@jhu.edu'
+  website: ''
+  citation: ''
+
