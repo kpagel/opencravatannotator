@@ -1,5 +1,5 @@
 # ACMG_autocurate: classification of variants based on other analyses
-ACMG is a freely accessible classifier of variants, classifying variants as Pathogenic, Benign, or VUS (variant of unknown significance).
+This annotator, ACMG Autocurat, is a freely accessible classifier of variants and can classify variants as Pathogenic, Benign, or VUS (variant of unknown significance). The rules used to classify are derived from the 2015 Standards and guidelines for the interpretation of sequence variants via the American College of Medical Genetics and Genomics (ACMG) and the Association for Molecular Pathology AMP).
 
 ACMG_autocurate uses the gnomAD, ClinVar, and SpliceAI annotators, following the logic below, sequentially:
 
